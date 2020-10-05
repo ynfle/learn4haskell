@@ -655,9 +655,11 @@ You need to use recursion in this task. Feel free to return to it later, if you
 aren't ready for this boss yet!
 -}
 firstDigit :: Int -> Int
-firstDigit n
-    | abs n <= 9 = abs n
-    | otherwise = firstDigit (div (abs n) 10)
+firstDigit n 
+    | absN <= 9 = absN
+    | otherwise = firstDigit (div absN 10)
+    where
+        absN = abs n
 
 
 {-
