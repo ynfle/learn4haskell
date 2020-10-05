@@ -632,7 +632,7 @@ Try to introduce variables in this task (either with let-in or where) to avoid
 specifying complex expressions.
 -}
 sumLast2 :: Int -> Int
-sumLast2 n = (lastDigit (abs n)) + (lastDigit (div (abs n) 10))
+sumLast2 n = lastDigit (abs n) + lastDigit (div (abs n) 10)
 
 
 {- |
