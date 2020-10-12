@@ -879,7 +879,11 @@ and reverses it.
 -}
 rewind :: [a] -> [a]
 rewind [] = []
-rewind (x:xs) = rewind xs ++ [x]
+rewind l = recurse l []
+    where
+        recurse :: [a] -> [a] -> [a]
+        recurse [] acc = acc
+        recurse (x:xs) acc = recurse xs (x : acc)
 
 
 {-
